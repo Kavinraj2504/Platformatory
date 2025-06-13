@@ -1,2 +1,0 @@
-# Platformatory
-platformatory assignment 

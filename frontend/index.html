@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+ <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>User Profile</h1>
+      <button id="logoutBtn" class="logout-btn hidden">Logout</button>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button id="profileTab" class="tab-button hidden" onclick="showTab('profile')">Profile</button>
+      <button id="profileUpdateTab" class="tab-button hidden" onclick="showTab('profileUpdate')">Profile Update</button>
+    </div>
+
+    <!-- Login Tab -->
+    <div id="login" class="tab-content">
+      <h2>Sign In</h2>
+      <p id="loginMessage" class="error hidden"></p>
+      <a id="loginBtn" class="button">Sign in with Google</a>
+    </div>
+
+    <!-- Profile Tab -->
+    <div id="profile" class="tab-content hidden">
+      <h2>Your Profile</h2>
+      <div id="profileInfo" class="profile-info">
+        <p><strong>First Name:</strong> <span id="profileFirstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="profileLastName"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <p><strong>Phone Number:</strong> <span id="profilePhoneNumber"></span></p>
+        <p><strong>Pincode:</strong> <span id="profilePincode"></span></p>
+        <p><strong>City:</strong> <span id="profileCity"></span></p>
+      </div>
+    </div>
+
+    <!-- Profile Update Tab -->
+    <div id="profileUpdate" class="tab-content hidden">
+      <h2>Update Profile</h2>
+      <p id="updateMessage" class="hidden"></p>
+      <form id="profileUpdateForm">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="pincode">Pincode</label>
+          <input type="text" id="pincode" name="pincode" required>
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <button type="submit">Update Profile</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+node_modules/
+dist/
+*.log
+# Environment variables
+.env
+
+# TypeScript
+*.tsbuildinfo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Temporal build outputs (if any)
+temporal/.temporal
+
+# Coverage / testing
+coverage/
