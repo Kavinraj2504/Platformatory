@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
- "scripts": {
-  "start": "tsx --require dotenv/config src/server.ts",
-  "worker": "tsx --require dotenv/config src/temporal/workers/profile.worker.ts",
-  "inspect-workflows": "node -r dotenv/config -e \"require('@temporalio/worker').bundleWorkflowCode({ workflowsPath: './src/temporal/workflows' }).catch(console.error)\""
-}
-,
+  "scripts": {
+    "start": "tsx --require dotenv/config src/server.ts",
+    "worker": "tsx --require dotenv/config src/temporal/workers/profile.worker.ts",
+    "inspect-workflows": "node -r dotenv/config -e \"require('@temporalio/worker').bundleWorkflowCode({ workflowsPath: './src/temporal/workflows' }).catch(console.error)\""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -6,8 +6,6 @@ import './config/passport';
 import userRoutes from './routes/user.routes';
 import { runProfileWorker } from './temporal/workers/profile.worker';
 
-
-
 const app = express();
 
 //change urls as per your requirement
@@ -31,13 +29,14 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-
 app.use(express.json());
 app.use(passport.initialize());
 
+// Mount all routes at root level first
+app.use('/', userRoutes);
 
-app.use(userRoutes);
-
+// Mount API routes with /api prefix
+app.use('/api', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGO_URI!)

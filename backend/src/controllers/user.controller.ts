@@ -54,7 +54,7 @@ export const getUserProfile = async (req: Request, res: Response, next: NextFunc
   
       const { id } = req.user as any;
       const user = await User.findOne({ googleId: id });
-  
+       console.log(User)
       if (!user) {
         res.status(404).send("User not found");
         return;

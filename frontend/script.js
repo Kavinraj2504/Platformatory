@@ -1,9 +1,10 @@
 let userData = null;
     let accessToken = null;
-    const YOUR_BASE_URL = 'http://localhost:5000';
+    const YOUR_BASE_URL = 'http://localhost:5000/api';
+    const AUTH_BASE_URL = 'http://localhost:5000';
 
     // Set up login button
-    document.getElementById('loginBtn').href = `${YOUR_BASE_URL}/google`;
+    document.getElementById('loginBtn').href = `${AUTH_BASE_URL}/google`;
 
     // Show specific tab
     function showTab(tabId) {
